@@ -1,0 +1,47 @@
+<h2>Informações do Alojamentos</h2>
+
+<div *ngIf="place">
+  <h3>{{ place.id }}</h3>
+  <h4>{{ place.type }}</h4>
+  <b>{{ place.city }}</b>
+  <p>
+    <b>{{ place.address }}</b>
+  </p>
+  <p>
+    <b>{{ place.host }}</b>
+  </p>
+</div>
+
+<div class="mat-elevation-z8" style="margin-top: 30px;">
+  <mat-table [dataSource]="placeList">
+    <!-- Nome Column -->
+    <ng-container matColumnDef="nome">
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        style="width: 100px;text-align: center;"
+      >
+        Nome
+      </th>
+      <td mat-cell *matCellDef="let cliente" style="text-align: center;">
+        {{ place.id }}
+      </td>
+    </ng-container>
+
+    <!-- Sobrenome Column -->
+    <ng-container matColumnDef="sobrenome">
+      <th mat-header-cell *mat>algumacoisa</th>
+      <td mat-cell *matCellDef="let cliente" style="text-align: center;">
+        {{ place.type }}
+      </td>
+    </ng-container>
+    <mat-paginator
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+      style="width: 950px;"
+    ></mat-paginator>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </mat-table>
+</div>
