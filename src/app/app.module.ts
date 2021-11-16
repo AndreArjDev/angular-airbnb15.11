@@ -12,13 +12,13 @@ import { PlaceComponent } from './place/place.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlaceService } from './place.service';
 import { FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    MatTableModule,
+    
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([

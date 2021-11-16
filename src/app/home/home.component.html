@@ -8,3 +8,9 @@
 <p><input type="text" id="place" name="place" [(ngModel)]="place"></p>
 
 <button type="button" (click)="getPlace(place)">Buscar</button>
+
+<div *ngFor="let place of places">
+  <h3>{{ place.id }}</h3>
+  <h4>{{ place.type }}</h4>
+
+</div>

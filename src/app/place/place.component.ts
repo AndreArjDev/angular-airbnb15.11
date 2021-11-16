@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Place } from '../place';
 import { PlaceService } from '../place.service';
-import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-place',
@@ -10,8 +9,8 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./place.component.css'],
 })
 export class PlaceComponent implements OnInit {
-  place: Place | undefined;
-  placeList = null;
+  place: any;
+  places: Array<Place> = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -19,12 +18,13 @@ export class PlaceComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    
+    this.place = {};
+
     const routeParams = this.route.snapshot.paramMap;
     const numeroPlaceFromRoute = String(routeParams.get('place'));
 
     this.placeService
       .getPlace(numeroPlaceFromRoute)
-      .subscribe((res:Place[]) => (this.placeList = new MatTableDataSource<Place>(res)));
+      .subscribe((res) => (this.places = res));
   }
 }

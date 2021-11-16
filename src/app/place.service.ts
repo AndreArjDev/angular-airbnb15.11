@@ -4,12 +4,14 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class PlaceService {
+  //url = 'https://airbnb-similar-angular.herokuapp.com/place/';
+  url = '192.168.15.19/:8080/place/';
   constructor(private http: HttpClient) {}
 
-  getPlace(place: string) {
-    alert('https://airbnb-similar-angular.herokuapp.com/place/' + place)
-    return this.http.get<Place[]>(
-      'https://airbnb-similar-angular.herokuapp.com/place/' + place
-    );
+  getPlace(place: any) {
+    return this.http.get<Array<Place>>(this.url + place);
+  }
+  listPlace() {
+    return this.http.get<Array<Place>>(this.url);
   }
 }
