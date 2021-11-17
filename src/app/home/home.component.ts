@@ -22,4 +22,7 @@ export class HomePageComponent implements OnInit {
     this.place = {};
     this.placeService.listPlace().subscribe((res) => (this.places = res));
   }
+  resetplace() {
+    this.place.reset();
+  }
 }

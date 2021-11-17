@@ -1,13 +1,26 @@
 <h2>Informações do Alojamentos</h2>
 
-<div *ngFor="let place of places">
-  <h3>{{ place.id }}</h3>
-  <h4>{{ place.type }}</h4>
-  <b>{{ place.city }}</b>
-  <p>
-    <b>{{ place.address }}</b>
-  </p>
-  <p>
-    <b>{{ place.host }}</b>
-  </p>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Tipo</th>
+      <th>Cidade</th>
+      <th>Endereço</th>
+      <th>Anfitrião</th>
+      <th>Contato</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let place of places">
+    <tr>
+      <td>{{ place.id }}</td>
+      <td>{{ place.type }}</td>
+      <td>{{ place.city }}</td>
+      <td>{{ place.address }}</td>
+      <td>{{ place.host }}</td>
+      <td>
+        <a href="https://wa.me/55 + place.contato">{{ place.contato }}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
