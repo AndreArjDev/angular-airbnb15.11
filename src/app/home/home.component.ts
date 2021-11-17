@@ -10,6 +10,7 @@ import { PlaceService } from '../place.service';
 })
 export class HomePageComponent implements OnInit {
   place: any;
+
   places: Array<any> = [];
 
   getPlace(place: string) {
@@ -21,8 +22,5 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.place = {};
     this.placeService.listPlace().subscribe((res) => (this.places = res));
-  }
-  resetplace() {
-    this.place.reset();
   }
 }

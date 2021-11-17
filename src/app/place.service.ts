@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class PlaceService {
-  //url = 'https://airbnb-similar-angular.herokuapp.com/place/';
-  url = '192.168.15.19/:8080/place/';
+  url = 'https://airbnb-similar-angular.herokuapp.com/place/';
+
   constructor(private http: HttpClient) {}
 
   getPlace(place: any) {
