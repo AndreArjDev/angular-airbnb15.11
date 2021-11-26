@@ -1,0 +1,45 @@
+<h2>Cadastro de Alojamento</h2>
+<form>
+  <input
+    type="text"
+    id="type"
+    name="type"
+    placeholder="Tipo"
+    [(ngModel)]="place.type"
+  />
+
+  <input
+    type="text"
+    id="address"
+    name="address"
+    placeholder="Endereço"
+    [(ngModel)]="place.address"
+  />
+
+  <input
+    type="text"
+    id="city"
+    name="city"
+    placeholder="Cidade"
+    [(ngModel)]="place.city"
+  />
+
+  <input
+    type="text"
+    id="host"
+    name="host"
+    placeholder="Anfitrião"
+    [(ngModel)]="place.host"
+  />
+
+  <input
+    type="text"
+    id="contato"
+    name="contato"
+    placeholder="Contato"
+    [(ngModel)]="place.contato"
+  />
+
+  <br />
+  <button type="button" (click)="save()">Salvar</button>
+</form>
