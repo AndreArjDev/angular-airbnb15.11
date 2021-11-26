@@ -12,6 +12,7 @@ import { PlaceComponent } from './place/place.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlaceService } from './place.service';
 import { FormsModule } from '@angular/forms';
+import {FormCreateComponent} from './form-create/form-create.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
       //   { path: 'list', component: CepListComponent },
       //{ path: 'ceps/:numeroCep', component: CepComponent },
       { path: 'place/:place', component: PlaceComponent },
+      { path: 'form-create', component: FormCreateComponent },
     ]),
   ],
   declarations: [
@@ -35,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     HomePageComponent,
     //CepComponent,
     PlaceComponent,
+    FormCreateComponent,
     
   ],
   providers: [HttpClientModule, PlaceService],
