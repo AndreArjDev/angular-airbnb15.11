@@ -1,17 +1,1 @@
-.table thead {
-  background-color: rgb(148, 144, 144);
-}
 
-.table th {
-  color: white;
-  font-size: small;
-  border: 1px solid black;
-}
-
-.table td {
-  font-size: small;
-  margin: 8px;
-  padding: 2px;
-  text-align: center;
-  border: 1px solid black;
-}
