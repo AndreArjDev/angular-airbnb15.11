@@ -1,12 +1,11 @@
 <h1>Bem vindo!</h1>
-<h2>Alojamentos</h2>
 
 <h3>Encontre o seu alojamento:</h3>
 
 <p>
   <input
-    type="text"
     id="place"
+    type="text"
     name="place"
     placeholder="Cidade"
     [(ngModel)]="place"
@@ -14,7 +13,7 @@
 </p>
 
 <button type="button" (click)="getPlace(place)">Buscar</button>
-
+<button type="button" (click)="navigateForForm()">Novo Alojamento</button>
 <table class="table">
   <thead>
     <tr>
